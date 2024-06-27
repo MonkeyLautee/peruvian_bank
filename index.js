@@ -25,7 +25,7 @@ app.get('/balance', async (req, res) => {
     }
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: 'Failed to retrieve balance', details: error });
+    res.status(500).json({ error: 'Failed to retrieve balance. 5', details: error });
   }
 });
 
@@ -58,7 +58,7 @@ app.post('/deposit', async (req, res) => {
     res.json({ balance: doc });
   } catch (error) {
     console.error('Deposit error:', error);
-    res.status(500).json({ error: 'Failed to process deposit', details: error });
+    res.status(500).json({ error: 'Failed to process deposit. 5', details: error });
   }
 });
 
